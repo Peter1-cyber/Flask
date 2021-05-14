@@ -6,6 +6,8 @@
     <title> My Page</title>
 </head>
 <body>
+    <div class='body1'>
+    <div class="container"> 
     <h1> {{question}} </h1>
     <form method="POST" action="test"> 
     <input type="hidden" name="q_id" value="{{quest_id}}">
@@ -14,6 +16,6 @@
             {{ answer }}
             {% endfor %} 
         <input type="submit" value="Ответить">
-    </form> 
+    </form> </div></div>
 </body>
 </html>

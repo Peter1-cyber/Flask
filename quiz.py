@@ -46,10 +46,6 @@ def quiz_form():
     q_list = get_quizes()
     return render_template("start.html", q_list = q_list)
     
-
-
-
-
 def test():
     if not ('quiz' in session) or int(session['quiz']) < 0:
         return redirect(url_for("index"))

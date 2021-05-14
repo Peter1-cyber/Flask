@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_quiz.css')}}">
+    <title> My Page</title>
+</head>
+<body>
+    <div class="body"> <h2> Текст  </h2>   </div>
+    {% if q_list %}
+    <form method="POST" action="/">
+        
+        <select name="quiz">
+        {% for id, name in q_list %}
+            <option value="{{id}}"> {{name}} </option>
+            {% endfor %} 
+        </select>
+        <input type="submit" value="Выбрать викторину">
+    </form>
+    {% else %} 
+        <h2> Список не передан </h2>
+    {% endif %}
+
+</body>
+</html>
